@@ -29,7 +29,7 @@ namespace Example_Programming_Project.Droid
 			Button button = FindViewById<Button> (Resource.Id.myButton);
             Button btn_submit = FindViewById<Button>(Resource.Id.button1);
 			
-			btn_submit.Click += delegate {
+			button.Click += delegate {
 				button.Text = string.Format ("{0} clicks!", count++);
 
                 Console.WriteLine(string.Format("{0} klicks, Du heißt: {1} ", count, username));
