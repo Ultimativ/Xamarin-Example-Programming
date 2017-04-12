@@ -3,30 +3,33 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Button
-        android:id="@+id/myButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
     <TextView
         android:text="Username:"
+        android:gravity="center"
+        android:textSize="32"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="380.0dp"
         android:layout_height="wrap_content"
         android:id="@+id/textView1" />
     <EditText
         android:inputType="textPersonName"
+        android:gravity="center"
+        android:textSize="32"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText2" />
     <TextView
         android:text="Password:"
+        android:gravity="center"
+        android:textSize="32"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="381.5dp"
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
     <EditText
         android:inputType="textPassword"
+        android:gravity="center"
+        android:textSize="32"
         android:layout_width="match_parent"
         android:layout_height="47.5dp"
         android:id="@+id/editText1"
@@ -48,4 +51,11 @@
         android:layout_height="97.0dp"
         android:layout_marginRight="0.0dp"
         android:layout_marginLeft="0.0dp" />
+    <TextView
+        android:text="Ausgabe"
+        android:gravity="center"
+        android:textSize="32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
 </LinearLayout>

@@ -13,31 +13,33 @@ namespace Example_Programming_Project.Droid
     [Activity(Label = "Example_Programming_Project.Android", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        int count = 0;
 
-        string username = "Jeremy";
-
+         EditText edt;
+         TextView res;
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
+          
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
 			// Get our button from the layout resource,
 			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-            Button btn_submit = FindViewById<Button>(Resource.Id.button1);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
 
-                Console.WriteLine(string.Format("{0} klicks, Du heißt: {1} ", count, username));
-			};
+            edt = FindViewById<EditText>(Resource.Id.editText1);
+            Button btn = FindViewById<Button>(Resource.Id.button1);
+            res = FindViewById<TextView>(Resource.Id.textView3);
 
-           
-		}
-	}
+            btn.Click += Btn_Click;
+ 
+        }
+
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            string s = edt.Text.ToString();
+            res.Text = s;
+        }
+    }
 }
 
 
